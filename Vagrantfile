@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     wp.vm.provision :shell, path: "_setup/shell/apache-php.sh"
     wp.vm.provision :shell, privileged: false, path: "_setup/shell/node.sh"
     wp.vm.provision :shell, privileged: false, path: "_setup/shell/mysql.sh"
-    wp.vm.provision :shell, privileged: false, path: "mysql/postinstall.sh"
+    wp.vm.provision :shell, privileged: false, path: "_setup/mysql/postinstall.sh"
     wp.vm.network "private_network", ip: "192.168.55.55"
   end
 end
