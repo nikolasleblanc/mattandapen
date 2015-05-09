@@ -1,0 +1,156 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+@import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);
+@import url(http://fonts.googleapis.com/css?family=Ovo);
+@import url(http://fonts.googleapis.com/css?family=Unica+One);
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:700,900);
+
+$font_title: 'Ovo', serif;
+$font_header: $font_title;
+$font_body: 'Crimson Text', serif;
+$font_menu: 'Vollkorn', serif;
+$font_pullquote: 'Oswald', sans-serif;
+$font_photo: 'Oswald', sans-serif;
+$font_dropcap: Georgia;
+$font_sidemenu_header: 'Oswald', sans-serif;
+
+.top-bar .name h1, .tab-bar h1, .top-bar-section ul li a, .off-canvas-list {
+  font-family: $font_menu;
+}
+.top-bar .name h1, .tab-bar h1 {
+  font-size: 1.4em;
+}
+.top-bar-section ul li a {
+  font-size: 1.1em;
+  color: #fff;
+}
+
+h1 {
+  font-family: $font_title;
+  letter-spacing: -0.5px;
+  font-size: 2.5em;
+}
+h2 {
+  letter-spacing: -0.5px;
+  font-size: 1.2em;
+}
+h2, h3, h4, h5, h6 {
+  font-family: $font_header;
+}
+.items h2, .featured h2, .items h1 {
+  font-family: $font_sidemenu_header;
+}
+p, .date, li, time, .byline, .sectionTitle, .sidemenu li ul li, article footer {
+  font-family: $font_body;
+  font-size: .8em;
+  line-height: 1.5em;
+}
+.sectionTitle {
+  width: 100%;
+  text-align: center;
+  font-size: .6em;
+}
+time, .byline {
+  font-size: .8em;
+}
+.byline {
+  display: none;
+}
+.items h1 {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.pullQuote {
+  font-family: $font_pullquote;
+  width: 70%;
+  font-size: 3em;
+  margin: 0 auto;
+  color: $red;
+  font-size: 2em;
+  text-indent: -0.4125em;
+}
+.photo {
+  font-family: $font_photo;
+  font-family: $font_pullquote;
+  width: 70%;
+  font-size: 3em;
+  margin: 0 auto;
+  color: $red;
+  font-size: 1.75em;
+  text-indent: -0.4125em;
+}
+
+.single-two-pens {
+  hr+p::first-letter, .entry-content p:first-child::first-letter {
+    font-family: $font_dropcap;
+    font-size: 75px;
+    line-height: 60px;
+    float: left;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+}
+
+.sidemenu {
+  li {
+    font-family: $font_sidemenu_header;
+  }
+}
+
+.container[role=main] {
+  h2 {
+    color: #008CBA;
+    text-decoration: none;
+    line-height: 1.6em;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.featured h2 {
+  font-size: 2em;
+}
+
+header {
+  h1 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px #000;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  }
+}
+
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.8em;
+}
+h4 {
+  font-size: 1.6em;
+}
+h5 {
+  font-size: 1.4em;
+}
+h6 {
+  font-size: 1.2em;
+}
+
+.items {
+  h2 {
+    font-size: 1em;
+  }
+}
+
+.attribution, .footer {
+  font-size: .8em;
+}
+
+

@@ -1,0 +1,38 @@
+
+.archive, .page, .single-two-pens {
+  .featured {
+    p {
+      margin: 0 auto;
+    }
+  }
+}
+
+article {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+li article {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.sidemenu {
+  li, ul li {
+    padding: 0;
+    margin: 0;
+    &.publisher, &.categories, &.tags {
+      ul {
+        padding: 0;
+        margin-left: 0px;
+      }
+    }
+
+
+  }
+}
+
+.page .pageContent {
+  margin: 0 auto;
+}
+
