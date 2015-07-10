@@ -3,9 +3,9 @@
  * The base configurations of the WordPress.
  *
  * This file has the following configurations: MySQL settings, Table Prefix,
- * Secret Keys, and ABSPATH. You can find more information by visiting
- * {@link https://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
- * Codex page. You can get the MySQL settings from your web host.
+ * Secret Keys, WordPress Language, and ABSPATH. You can find more information
+ * by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
+ * wp-config.php} Codex page. You can get the MySQL settings from your web host.
  *
  * This file is used by the wp-config.php creation script during the
  * installation. You don't have to use the web site, you can just copy this file
@@ -16,16 +16,41 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'database_name_here');
 
-/** MySQL database username */
-define('DB_USER', 'username_here');
+/** These settings are automatically used on your OpenShift Gear*/
+if (getenv('OPENSHIFT_APP_NAME') != "") {
+  /** The name of the database for WordPress */
+  define('DB_NAME', getenv('OPENSHIFT_APP_NAME'));
 
-/** MySQL database password */
-define('DB_PASSWORD', 'password_here');
+  /** MySQL database username */
+  define('DB_USER', getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+  /** MySQL database password */
+  define('DB_PASSWORD', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+
+  /** MySQL hostname */
+  define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST') . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT'));
+
+/** These settings can be configured for your local development environment
+  and will not affect your OpenShift configuration */
+} else {
+  define('DB_NAME', 'wordpress');
+
+  /** MySQL database username */
+  define('DB_USER', 'root');
+
+  if ($_SERVER["SERVER_NAME"] === 'mattandapen.com') {
+    define('DB_PASSWORD', '');
+    define('DB_HOST', '');
+  }
+  else
+  {
+    define('DB_PASSWORD', '');
+    define('DB_HOST', '');
+  }
+}
+
+
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -62,6 +87,16 @@ define('NONCE_SALT',       'put your unique phrase here');
 $table_prefix  = 'wp_';
 
 /**
+ * WordPress Localized Language, defaults to English.
+ *
+ * Change this to localize WordPress. A corresponding MO file for the chosen
+ * language must be installed to wp-content/languages. For example, install
+ * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
+ * language support.
+ */
+define('WPLANG', '');
+
+/**
  * For developers: WordPress debugging mode.
  *
  * Change this to true to enable the display of notices during development.
@@ -74,7 +109,7 @@ define('WP_DEBUG', false);
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+  define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

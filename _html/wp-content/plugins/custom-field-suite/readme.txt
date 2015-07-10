@@ -1,9 +1,8 @@
 === Custom Field Suite ===
 Contributors: mgibbs189
-Donate link: http://customfieldsuite.com/
 Tags: custom fields, fields, forms, meta, postmeta, metabox, wysiwyg, relationship, repeater, upload
 Requires at least: 3.8
-Tested up to: 4.2
+Tested up to: 4.2.2
 Stable tag: trunk
 License: GPLv2
 
@@ -34,11 +33,11 @@ This plugin is a free, lightweight alternative to Advanced Custom Fields.
 * Spanish (es_ES) - thanks to [Andrew Kurtis](http://www.webhostinghub.com/)
 * Persian (fa_IR) - thanks to Vahid Masoomi
 * French (fr_FR) - thanks to Jean-Christophe Brebion
-* Hungarian (hu_HU)
 * Italian (it_IT)
 * Japanese (ja) - thanks to Karin Suzakura
 * Polish (pl_PL) - thanks to [Digital Factory](digitalfactory.pl)
 * Russian (ru_RU) - thanks to Glebcha
+* Catalan (ca) - thanks to Luis Bordas
 
 == Installation ==
 
@@ -52,6 +51,17 @@ This plugin is a free, lightweight alternative to Advanced Custom Fields.
 4. The Tools area for migrating field groups
 
 == Changelog ==
+
+= 2.4.4 =
+* Added Catalan translation (props Luis Bordas)
+* Updated translations
+
+= 2.4.3 =
+* Prevent hyperlink field with target="none" from opening new tab (props @jchristopher)
+* Enable media filtering of file fields (props @camiloclc)
+* Updated jQuery minicolors to fix deselect issue
+* Updated translations (props @jcbrebion)
+
 = 2.4.2 =
 * New CFS logo (props @chrisvanpatten)
 * Added composer.json file

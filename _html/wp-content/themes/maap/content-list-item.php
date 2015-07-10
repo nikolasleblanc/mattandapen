@@ -18,7 +18,7 @@ else
 			<header>
                 		<div class="date"><?php echo $date; ?></div>
                 		<h2><a href="<?php echo CFS()->get('original_url')['url']; ?>"><?php the_title(); ?></a></h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam nisi vel nunc convallis, in semper nulla pharetra. Sed volutpat nisi vel leo mollis hendrerit. Sed venenatis convallis erat non eleifend. Proin elit risus, consectetur at finibus eu, molestie finibus ipsum. Integer vehicula ornare est, id pharetra ex imperdiet nec. Nulla facilisi. Donec varius consectetur pharetra.</p>
+				<?php the_content(); ?>
         		</header>
 		</div>
 	</div>
