@@ -45,8 +45,8 @@ if (getenv('OPENSHIFT_APP_NAME') != "") {
   }
   else
   {
-    define('DB_PASSWORD', '');
-    define('DB_HOST', '');
+    define('DB_PASSWORD', '1234');
+    define('DB_HOST', '127.0.0.1');
   }
 }
 
